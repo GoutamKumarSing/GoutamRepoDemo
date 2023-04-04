@@ -1,0 +1,26 @@
+//Write a java program check wheater the given number is Palindrome or not
+package day5Mam;
+
+import java.util.Scanner;
+
+public class Palindrome {
+     public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a value to chek value is palindrom or not");
+		int num=sc.nextInt();
+		int temp=num;
+		int rev=0;
+		while(num!=0) {
+			int rem=num%10;
+			rev=rev*10+rem;
+			num=num/10;
+		}
+		if(rev==temp) {
+			System.out.println("Entered Number is Palindrom");
+		}
+		else
+		{
+			System.out.println("Entered Number is Not a Palindrom");
+		}
+	}
+}
